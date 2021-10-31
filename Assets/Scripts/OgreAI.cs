@@ -31,7 +31,6 @@ public class OgreAI : MonoBehaviour
     void Update()
     {
         Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, doorRange);
-        Debug.Log(cols.Length);
         foreach (Collider2D c in cols)
         {
             if (c.tag == "Door")
@@ -65,8 +64,8 @@ public class OgreAI : MonoBehaviour
                 }
                 wander = true;
 
-                transform.rotation = Quaternion.LookRotation(transform.forward, agent.desiredVelocity * -1);
             }
+            transform.rotation = Quaternion.LookRotation(transform.forward, agent.desiredVelocity * -1);
         }
     }
 

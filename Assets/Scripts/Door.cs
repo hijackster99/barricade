@@ -33,7 +33,7 @@ public class Door : MonoBehaviour
         colors.Add("Orange", new Color(255, 127, 0, 127));
         sprite.color = colors.GetValueOrDefault(color);
 
-        player = GameObject.Find("Grid").GetComponentInChildren<PlayerController>();
+        player = GameObject.Find("MainCharacter").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame

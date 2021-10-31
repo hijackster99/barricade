@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   open: 0
-  reversed: 0
+  reversed: 1
   sprite: {fileID: 4471145598626769280}
   link: {fileID: 413057243048805993}
   color: Red
