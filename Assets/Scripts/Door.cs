@@ -5,15 +5,13 @@ using UnityEngine.AI;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] bool open;
+    [SerializeField] public bool open;
     [SerializeField] bool reversed;
 
     [SerializeField] SpriteRenderer sprite;
     [SerializeField] NavMeshLink link;
 
     public string color;
-
-    NavMeshSurface2d surface;
 
     [SerializeField] float range;
 

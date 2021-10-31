@@ -17,6 +17,7 @@ public class OgreAI : MonoBehaviour
     GameObject player;
     [SerializeField] float currentDoorAnimTime;
     bool door;
+    int breaking;
 
     // Start is called before the first frame update
     void Start()
@@ -25,15 +26,18 @@ public class OgreAI : MonoBehaviour
         agent.updateUpAxis = false;
 
         player = GameObject.Find("MainCharacter");
+
+        breaking = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        door = false;
         Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, doorRange);
         foreach (Collider2D c in cols)
         {
-            if (c.tag == "Door")
+            if (c.tag == "Door" && !c.gameObject.GetComponent<Door>().open)
             {
                 door = true;
             }
@@ -42,8 +46,14 @@ public class OgreAI : MonoBehaviour
         if (door)
         {
             agent.isStopped = true;
-            currentDoorAnimTime = doorAnimTime;
+            breaking++;
             animator.SetBool("Break", true);
+            animator.SetBool("Walk", false);
+
+        }
+        if (breaking == 1)
+        {
+            currentDoorAnimTime = doorAnimTime;
         }
         else
         {
@@ -65,17 +75,22 @@ public class OgreAI : MonoBehaviour
                 wander = true;
 
             }
-            transform.rotation = Quaternion.LookRotation(transform.forward, agent.desiredVelocity * -1);
+            if(!door)
+            {
+                transform.rotation = Quaternion.LookRotation(transform.forward, agent.desiredVelocity * -1);
+            }
+            animator.SetBool("Walk", true);
         }
     }
 
     void FixedUpdate()
     {
+        Debug.Log(door);
         if (currentDoorAnimTime > 0)
         {
             currentDoorAnimTime--;
         }
-        else
+        else if(door)
         {
             BreakDoor();
             animator.SetBool("Break", false);
@@ -92,5 +107,6 @@ public class OgreAI : MonoBehaviour
                 c.gameObject.GetComponentInChildren<Door>().Toggle();
             }
         }
+        breaking = 0;
     }
 }

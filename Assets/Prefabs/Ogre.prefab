@@ -124,7 +124,7 @@ MonoBehaviour:
   range: 10
   wanderRange: 5
   doorRange: 1
-  doorAnimTime: 300
+  doorAnimTime: 180
   wander: 0
   currentDoorAnimTime: 0
 --- !u!195 &927696474521634842
