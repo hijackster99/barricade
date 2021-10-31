@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     Door[] doors;
 
+    GameObject end;
+
     public bool nearEnd;
 
     public Door nearDoor;
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
         agent.updateUpAxis = false;
 
         doors = GameObject.Find("Grid").GetComponentsInChildren<Door>();
+        end = GameObject.Find("EndDoor");
 
         currentHealth = health;
     }
@@ -65,6 +68,13 @@ public class PlayerController : MonoBehaviour
                         d.Toggle();
                     }
                 }
+            }
+        }
+        if (nearEnd)
+        {
+            if (Input.GetKeyDown(keys.interact))
+            {
+                end.GetComponent<EndDoor>().Interact();
             }
         }
 
