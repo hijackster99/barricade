@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     Door[] doors;
 
+    public bool nearEnd;
+
     public Door nearDoor;
 
 
