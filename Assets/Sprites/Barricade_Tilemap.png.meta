@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1c51e85d5584efe44b80a76683c07f1b
+guid: 401a2db9937e89946a1f3309ea08a030
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -49,7 +49,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: main_character_idle
+      name: floor
       rect:
         serializedVersion: 2
         x: 0
@@ -130,35 +130,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e54e7cd75b0d2847a6ebdfbed1513e8
-      internalID: 590584904
+      spriteID: 0ddd187f94d6800469a673be0277c628
+      internalID: -1734695337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_character_1
+      name: tl_floor
       rect:
         serializedVersion: 2
         x: 100
         y: 900
         width: 100
         height: 100
-      alignment: 9
+      alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: -50}
+        - {x: -50, y: 50}
+        - {x: 50, y: 50}
+        - {x: 50, y: 30}
+        - {x: -30, y: 30}
+        - {x: -30, y: -50}
       tessellationDetail: 0
       bones: []
-      spriteID: d4525f417ab441249ae73b9021c73da4
-      internalID: -317030975
+      spriteID: 5b8052ce3b1348d4cad6cd2108199525
+      internalID: 1310798526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main_character_2
+      name: tr_floor
       rect:
         serializedVersion: 2
         x: 200
@@ -169,38 +175,202 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 30, y: -50}
+        - {x: 30, y: 30}
+        - {x: -50, y: 30}
+        - {x: -50, y: 50}
+        - {x: 50, y: 50}
+        - {x: 50, y: -50}
       tessellationDetail: 0
       bones: []
-      spriteID: e6c58eebfd6a3124d86cfaf542769973
-      internalID: 69386108
+      spriteID: c7e251e5a40d21f47a3d2ee506137e4c
+      internalID: 1534487605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_idle
+      name: br_floor
       rect:
         serializedVersion: 2
-        x: 0
-        y: 800
+        x: 300
+        y: 900
         width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: -50}
+        - {x: -50, y: -30}
+        - {x: 30, y: -30}
+        - {x: 30, y: 50}
+        - {x: 50, y: 50}
+        - {x: 50, y: -50}
       tessellationDetail: 0
       bones: []
-      spriteID: 95a6c24522abf5a4f993a2e16680f569
-      internalID: -650698510
+      spriteID: 270d463d9ea737843b68f463ba8ff163
+      internalID: 1919133903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_1
+      name: bl_floor
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: -50}
+        - {x: -50, y: 50}
+        - {x: -30, y: 50}
+        - {x: -30, y: -30}
+        - {x: 50, y: -30}
+        - {x: 50, y: -50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b88cb907f46f5b4ebfae9bae406cc5b
+      internalID: 1963420021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: t_floor
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: 30}
+        - {x: -50, y: 50}
+        - {x: 50, y: 50}
+        - {x: 50, y: 30}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f313d163ea3c5384186c9f9a28c14ab1
+      internalID: -1551344230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_floor
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: -50}
+        - {x: -50, y: -30}
+        - {x: 50, y: -30}
+        - {x: 50, y: -50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4d1c58b5afa5841ab495a907f1d049
+      internalID: 717197219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r_floor
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 30, y: -50}
+        - {x: 30, y: 50}
+        - {x: 50, y: 50}
+        - {x: 50, y: -50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310a9348e860a3f4c965a5732f92cd09
+      internalID: -549576681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: l_floor
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: -50}
+        - {x: -50, y: 50}
+        - {x: -30, y: 50}
+        - {x: -30, y: -50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf8982c730543e409dba40dbcf0ff01
+      internalID: 635111411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: -50}
+        - {x: -50, y: 50}
+        - {x: 50, y: 50}
+        - {x: 50, y: -50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea6c88064224f843955b1c27081481a
+      internalID: -900375669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tl_floor_bars
       rect:
         serializedVersion: 2
         x: 100
@@ -211,17 +381,23 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -30, y: 30}
+        - {x: -30, y: -50}
+        - {x: -50, y: -50}
+        - {x: -50, y: 50}
+        - {x: 50, y: 50}
+        - {x: 50, y: 30}
       tessellationDetail: 0
       bones: []
-      spriteID: 10143a56062b4cd46bb18b8bbe797d0d
-      internalID: -1863117224
+      spriteID: 5860e6327c34cca469e67ca601c9c071
+      internalID: 569243752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skeleton_2
+      name: tr_floor_bars
       rect:
         serializedVersion: 2
         x: 200
@@ -232,17 +408,23 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 30, y: -50}
+        - {x: 30, y: 30}
+        - {x: -50, y: 30}
+        - {x: -50, y: 50}
+        - {x: 50, y: 50}
+        - {x: 50, y: -50}
       tessellationDetail: 0
       bones: []
-      spriteID: b03b9d8ad121787418f4b1eb37bcde31
-      internalID: 363508892
+      spriteID: 9a69b811bc7e6fe449096d64f5aebd12
+      internalID: 178143989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone
+      name: br_floor_bars
       rect:
         serializedVersion: 2
         x: 300
@@ -253,38 +435,150 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: -50}
+        - {x: -50, y: -30}
+        - {x: 30, y: -30}
+        - {x: 30, y: 50}
+        - {x: 50, y: 50}
+        - {x: 50, y: -50}
       tessellationDetail: 0
       bones: []
-      spriteID: 2ba02e23438d59743b92c96f3baa0475
-      internalID: -304779102
+      spriteID: c02c7e27ea3d53241b81b7eee83a8c38
+      internalID: -721932047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombie_idle
+      name: bl_floor_bars
       rect:
         serializedVersion: 2
-        x: 0
-        y: 700
+        x: 400
+        y: 800
         width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: -50}
+        - {x: -50, y: 50}
+        - {x: -30, y: 50}
+        - {x: -30, y: -30}
+        - {x: 50, y: -30}
+        - {x: 50, y: -50}
       tessellationDetail: 0
       bones: []
-      spriteID: d092f24ce6a96c34e8f65f977c4f868e
-      internalID: 568409558
+      spriteID: c4e780101d9c3b748969489b0dea597c
+      internalID: 1192817837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombie_1
+      name: t_floor_bars
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: 30}
+        - {x: -50, y: 50}
+        - {x: 50, y: 50}
+        - {x: 50, y: 30}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38becff0b64f5104aa18b4932166aaed
+      internalID: 180322028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: r_floor_bars
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 30, y: -50}
+        - {x: 30, y: 50}
+        - {x: 50, y: 50}
+        - {x: 50, y: -50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1384c0fcca6ba8248a5dd3fdbc40beec
+      internalID: 1843496442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_floor_bars
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: -50}
+        - {x: -50, y: -30}
+        - {x: 50, y: -30}
+        - {x: 50, y: -50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041a466635c13824194fd6d017bfabc1
+      internalID: 1407989471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: l_floor_bars
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: -50}
+        - {x: -50, y: 50}
+        - {x: -30, y: 50}
+        - {x: -30, y: -50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e2fa613b7079a4199524dc11d8058b
+      internalID: -927092009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tl_floor_inverted
       rect:
         serializedVersion: 2
         x: 100
@@ -295,17 +589,21 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: 30}
+        - {x: -50, y: 50}
+        - {x: -30, y: 50}
+        - {x: -30, y: 30}
       tessellationDetail: 0
       bones: []
-      spriteID: 51cee3e41785a564a9615f5f9c896158
-      internalID: 1945473147
+      spriteID: 31da3c3a64f4eff45a41854c9fd19544
+      internalID: -1791757951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombie_2
+      name: bl_floor_inverted
       rect:
         serializedVersion: 2
         x: 200
@@ -316,158 +614,65 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -50, y: -50}
+        - {x: -50, y: -30}
+        - {x: -30, y: -30}
+        - {x: -30, y: -50}
       tessellationDetail: 0
       bones: []
-      spriteID: 613b1ee3eb06f3041a7b9282eb98d4b5
-      internalID: -1242790989
+      spriteID: bbadbe89b6aeb8d4db4c5e595682f08d
+      internalID: -1516632576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghost_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 600
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f562d43d9ca253419cdb63e24f4c6c3
-      internalID: 335953921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghost_2
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 600
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19737961857127240b8a43772fd8958e
-      internalID: 887861839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghost_3
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 600
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a244a3c5f4975df4ea6cf61fbd0882c3
-      internalID: 263448864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ghost_4
+      name: br_floor_inverted
       rect:
         serializedVersion: 2
         x: 300
-        y: 600
+        y: 700
         width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 30, y: -50}
+        - {x: 30, y: -30}
+        - {x: 50, y: -30}
+        - {x: 50, y: -50}
       tessellationDetail: 0
       bones: []
-      spriteID: 29d910f1f7c14a5409b369c8d0258283
-      internalID: 858608512
+      spriteID: 9e1be8273633c4546a0ed419f6b9849a
+      internalID: -4259241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ogre_idle
+      name: tr_floor_inverted
       rect:
         serializedVersion: 2
-        x: 0
-        y: 500
+        x: 400
+        y: 700
         width: 100
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 30, y: 30}
+        - {x: 30, y: 50}
+        - {x: 50, y: 50}
+        - {x: 50, y: 30}
       tessellationDetail: 0
       bones: []
-      spriteID: 06edd8ba3c3fc014398ff0ad1a644a5a
-      internalID: -1716577947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ogre_1
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 500
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cccbe393a53e685439a4d7515e7327ac
-      internalID: -1794271396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ogre_2
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 500
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0801df133065b2240a78ca0f27d7d8a4
-      internalID: -474542039
+      spriteID: 12e26605e5242fa49b4c7a860b4fd818
+      internalID: -2082175322
       vertices: []
       indices: 
       edges: []
@@ -483,23 +688,31 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      skeleton_1: -1863117224
-      zombie_2: -1242790989
-      zombie_1: 1945473147
-      ogre_1: -1794271396
-      ogre_idle: -1716577947
-      ghost_1: 335953921
-      main_character_idle: 590584904
-      ogre_2: -474542039
-      skeleton_idle: -650698510
-      main_character_1: -317030975
-      ghost_3: 263448864
-      bone: -304779102
-      skeleton_2: 363508892
-      zombie_idle: 568409558
-      ghost_4: 858608512
-      main_character_2: 69386108
-      ghost_2: 887861839
+      door: 900524116
+      tl_floor: 1310798526
+      t_floor: -1551344230
+      bl_floor_inverted: -1516632576
+      torch_2: 1415208899
+      tl_floor_inverted: -1791757951
+      b_floor: 717197219
+      wall: -900375669
+      t_floor_bars: 180322028
+      br_floor_inverted: -4259241
+      tr_floor: 1534487605
+      r_floor_bars: 1843496442
+      br_floor_bars: -721932047
+      l_floor: 635111411
+      r_floor: -549576681
+      tl_floor_bars: 569243752
+      tr_floor_bars: 178143989
+      l_floor_bars: -927092009
+      b_floor_bars: 1407989471
+      tr_floor_inverted: -2082175322
+      bl_floor_bars: 1192817837
+      torch_1: -309596215
+      br_floor: 1919133903
+      floor: -1734695337
+      bl_floor: 1963420021
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
