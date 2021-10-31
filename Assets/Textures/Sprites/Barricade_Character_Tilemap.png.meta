@@ -800,7 +800,7 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -821,7 +821,7 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -842,7 +842,7 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -863,7 +863,7 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -884,7 +884,7 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -905,7 +905,7 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -926,7 +926,7 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -947,7 +947,7 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -955,6 +955,27 @@ TextureImporter:
       bones: []
       spriteID: 875b7e594e3daf94e882e45bd711cdf0
       internalID: -936119001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db067921008b3964f9c3484161a8ae9a
+      internalID: -1992378236
       vertices: []
       indices: 
       edges: []
@@ -970,13 +991,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wolf_6: 1425816234
       door: -2143444738
+      heart: -1992378236
       skeleton_1: -1863117224
       ogre_break_7: 1256683819
       ogre_break_10: -626289265
       wolf_3: 546506721
-      main_character_2: 69386108
+      ghost_2: 887861839
       wolf_2: 490526639
       wolf_4: -1133992830
       ogre_break_6: 2087915477
@@ -1001,14 +1022,15 @@ TextureImporter:
       ghost_3: 263448864
       ogre_break_11: -1020801045
       bone: -304779102
-      skeleton_2: 363508892
+      wolf_6: 1425816234
       ogre_break_5: -228923882
-      zombie_idle: 568409558
+      skeleton_2: 363508892
       torch_1: -856439756
       ogre_break_9: 458019781
+      zombie_idle: 568409558
       ghost_4: 858608512
       ogre_break_8: -1456598630
-      ghost_2: 887861839
+      main_character_2: 69386108
       ogre_break_12: 1438734705
   spritePackingTag: 
   pSDRemoveMatte: 0

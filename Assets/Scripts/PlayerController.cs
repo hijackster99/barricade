@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour
     {
         if (currentInvuln <= 0)
         {
+            Destroy(GameObject.Find("Heart" + currentHealth));
             currentHealth--;
             currentInvuln = invulnerability;
         }
