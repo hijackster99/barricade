@@ -99,12 +99,12 @@ public class PlayerController : MonoBehaviour
 
         if (currentHealth <= 0) //game over
         {
-            Destroy(this);
+            GameObject.Find("LoseScreen").SetActive(true);
         }
     }
 
     public void Win()
-    { 
-        //win game
+    {
+        GameObject.Find("WinScreen").SetActive(true);
     }
 }
