@@ -12,6 +12,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
 
     [SerializeField] float camSpeed;
+    [SerializeField] float health;
+    [SerializeField] float invulnerability;
+
+    float currentHealth;
+    float currentInvuln;
 
     Door[] doors;
 
@@ -25,6 +30,8 @@ public class PlayerController : MonoBehaviour
         agent.updateUpAxis = false;
 
         doors = GameObject.Find("Grid").GetComponentsInChildren<Door>();
+
+        currentHealth = health;
     }
 
     // Update is called once per frame
@@ -34,13 +41,6 @@ public class PlayerController : MonoBehaviour
         Vector3 posZAdjust = new Vector3(pos.x, pos.y, 0);
         if (Input.GetKeyDown(keys.click))
         {
-            NavMeshHit hit;
-
-            if (agent.FindClosestEdge(out hit))
-            {
-                agent.SetDestination(hit.position);
-            }
-
             agent.SetDestination(posZAdjust);
         }
 
@@ -72,5 +72,19 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        if (currentInvuln > 0) currentInvuln--;
+    }
 
+    public void damaage()
+    {
+        if (currentInvuln <= 0)
+        {
+            health--;
+            currentInvuln = invulnerability;
+        }
+
+        if (health == 0) ; //game over
+    }
 }

@@ -13,8 +13,6 @@ public class ZombieAI : MonoBehaviour
 
     [SerializeField] bool wander;
 
-    Vector3 home;
-
     GameObject player;
 
     // Start is called before the first frame update
@@ -22,8 +20,6 @@ public class ZombieAI : MonoBehaviour
     {
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
-        home = transform.position;
 
         player = GameObject.Find("MainCharacter");
     }
@@ -40,13 +36,21 @@ public class ZombieAI : MonoBehaviour
         {
             if (!agent.hasPath || !wander)
             {
-                Vector3 dest = new Vector3(Mathf.Cos(Random.Range(0, 360)), Mathf.Sin(Random.Range(0, 360))) * wanderRange;
+                float angle = Random.Range(0, 360);
+                Vector3 dest = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)) * wanderRange;
 
                 agent.SetDestination(dest + transform.position);
             }
             wander = true;
         }
 
+        transform.rotation = Quaternion.LookRotation(transform.forward, agent.desiredVelocity * -1);
+
         animator.SetBool("Walk", agent.hasPath);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player") player.GetComponent<PlayerController>().damaage();
     }
 }
