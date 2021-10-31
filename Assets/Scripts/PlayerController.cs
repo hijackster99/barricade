@@ -13,12 +13,18 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float camSpeed;
 
+    Door[] doors;
+
+    public Door nearDoor;
+
 
     // Start is called before the first frame update
     void Start()
     {
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+
+        doors = GameObject.Find("Grid").GetComponentsInChildren<Door>();
     }
 
     // Update is called once per frame
@@ -44,6 +50,20 @@ public class PlayerController : MonoBehaviour
             float y = Input.GetAxis("Mouse Y");
 
             cam.transform.position -= (new Vector3(x, y, 0) * camSpeed);
+        }
+
+        if (nearDoor != null)
+        {
+            if (Input.GetKeyDown(keys.interact))
+            {
+                foreach (Door d in doors)
+                {
+                    if (d.color == nearDoor.color)
+                    {
+                        d.Toggle();
+                    }
+                }
+            }
         }
 
         transform.rotation = Quaternion.LookRotation(transform.forward, (posZAdjust - transform.position) * -1);
