@@ -15,22 +15,26 @@ public class Door : MonoBehaviour
 
     [SerializeField] float range;
 
-    SortedDictionary<string, Color> colors;
+    Dictionary<string, Color> colors;
 
     PlayerController player;
 
     // Start is called before the first frame update
     void Start()
     {
-        colors = new SortedDictionary<string, Color>();
+        System.Random rand = new System.Random();
+        colors = new Dictionary<string, Color>();
         colors.Add("Red", new Color(255, 0, 0, 127));
         colors.Add("Blue", new Color(0, 0, 255, 127));
         colors.Add("Green", new Color(0, 255, 0, 127));
-        colors.Add("Purple", new Color(127, 0, 255, 127));
         colors.Add("Yellow", new Color(255, 255, 0, 127));
         colors.Add("Orange", new Color(255, 127, 0, 127));
-        sprite.color = colors.GetValueOrDefault(color);
 
+        Color[] colorlist = new Color[colors.Count];
+        colors.Values.CopyTo(colorlist, 0);
+
+        sprite.color = colorlist[rand.Next() % colorlist.Length];
+        color = sprite.color.ToString();
         player = GameObject.Find("MainCharacter").GetComponent<PlayerController>();
     }
 
