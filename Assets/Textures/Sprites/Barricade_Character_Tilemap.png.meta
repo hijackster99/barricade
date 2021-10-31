@@ -472,6 +472,73 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: torch_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b2b173fefff54408004a9761f41f40
+      internalID: -856439756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torch_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 900
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c207bd841c205eb439803a531f49d855
+      internalID: -974357581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 900
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 1.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -10, y: -50}
+        - {x: -10, y: 50}
+        - {x: 11, y: 50}
+        - {x: 11, y: -50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209e648c5190dde43a80d7e4e9743a5b
+      internalID: -2143444738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -483,11 +550,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      door: -2143444738
       skeleton_1: -1863117224
       zombie_2: -1242790989
       zombie_1: 1945473147
       ogre_1: -1794271396
       ogre_idle: -1716577947
+      torch_2: -974357581
       ghost_1: 335953921
       main_character_idle: 590584904
       ogre_2: -474542039
@@ -497,6 +566,7 @@ TextureImporter:
       bone: -304779102
       skeleton_2: 363508892
       zombie_idle: 568409558
+      torch_1: -856439756
       ghost_4: 858608512
       main_character_2: 69386108
       ghost_2: 887861839
