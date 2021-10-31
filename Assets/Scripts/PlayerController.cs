@@ -101,11 +101,14 @@ public class PlayerController : MonoBehaviour
         if (currentHealth <= 0) //game over
         {
             Destroy(this);
+            GameObject.Find("LoseScreen").SetActive(true);
+            GameObject.Find("Overlay").SetActive(false);
         }
     }
 
     public void Win()
-    { 
-        //win game
+    {
+        GameObject.Find("WinScreen").SetActive(true);
+        GameObject.Find("Overlay").SetActive(false);
     }
 }
