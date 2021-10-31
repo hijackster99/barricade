@@ -29,10 +29,12 @@ public class GhostAI : MonoBehaviour
             Vector3 dir = player.transform.position - transform.position;
             Vector2 dir2D = new Vector2(dir.x, dir.y);
             rb.velocity = dir2D.normalized * speed;
+            GetComponent<Collider2D>().enabled = false;
         }
         else
         {
             rb.velocity = currentDir.normalized * speed;
+            GetComponent<Collider2D>().enabled = true;
         }
     }
 
