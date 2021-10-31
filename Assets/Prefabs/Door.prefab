@@ -222,7 +222,7 @@ MonoBehaviour:
   sprite: {fileID: 4471145598626769280}
   link: {fileID: 413057243048805993}
   color: Red
-  range: 1
+  range: 1.5
 --- !u!114 &7914979254712991735
 MonoBehaviour:
   m_ObjectHideFlags: 0
