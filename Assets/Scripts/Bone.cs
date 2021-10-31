@@ -20,7 +20,7 @@ public class Bone : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GameObject.Find("MainCharacter").GetComponent<PlayerController>().damaage();
+            GameObject.Find("MainCharacter").GetComponent<PlayerController>().damage();
         }
 
         Destroy(gameObject);

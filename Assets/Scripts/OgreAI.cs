@@ -109,4 +109,9 @@ public class OgreAI : MonoBehaviour
         }
         breaking = 0;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player") player.GetComponent<PlayerController>().damage();
+    }
 }

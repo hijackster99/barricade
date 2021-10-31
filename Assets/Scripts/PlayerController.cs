@@ -12,11 +12,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
 
     [SerializeField] float camSpeed;
-    [SerializeField] float health;
+    [SerializeField] static float maxHealth = 3;
     [SerializeField] float invulnerability;
 
-    float currentHealth;
-    float currentInvuln;
+    [SerializeField] float currentHealth;
+    [SerializeField] float currentInvuln;
 
     Door[] doors;
 
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
         doors = GameObject.Find("Grid").GetComponentsInChildren<Door>();
 
-        currentHealth = health;
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -79,14 +79,17 @@ public class PlayerController : MonoBehaviour
         if (currentInvuln > 0) currentInvuln--;
     }
 
-    public void damaage()
+    public void damage()
     {
         if (currentInvuln <= 0)
         {
-            health--;
+            currentHealth--;
             currentInvuln = invulnerability;
         }
 
-        if (health == 0) ; //game over
+        if (currentHealth <= 0) //game over
+        {
+            Destroy(this);
+        }
     }
 }
