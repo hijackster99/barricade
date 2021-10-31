@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class ButtonScript : MonoBehaviour
 {
-    [SerializeField] string SceneName;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +17,14 @@ public class ButtonScript : MonoBehaviour
         
     }
 
-    public void ChangeScene() {
-        SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
+    public void StartGame() 
+    {
+        SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
     }
 
     public void QuitGame()
