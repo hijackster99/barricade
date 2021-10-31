@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterKeys : MonoBehaviour
+public class PlayerKeys : MonoBehaviour
 {
     // Start is called before the first frame update
     public KeyCode interact;
     public KeyCode click;
+    public KeyCode moveCamera;
     void Start()
     {
         
