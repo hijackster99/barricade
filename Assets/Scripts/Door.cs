@@ -47,8 +47,6 @@ public class Door : MonoBehaviour
         {
             player.nearDoor = null;
         }
-
-        Debug.Log(link.area);
     }
 
     public void Toggle()
