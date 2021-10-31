@@ -102,4 +102,9 @@ public class PlayerController : MonoBehaviour
             Destroy(this);
         }
     }
+
+    public void Win()
+    { 
+        //win game
+    }
 }

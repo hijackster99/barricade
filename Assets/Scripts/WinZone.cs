@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class WinZone : MonoBehaviour
 {
-
+    GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find("MainCharacter");
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class WinZone : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            
+            player.GetComponent<PlayerController>().Win();
         }
     }
 }
