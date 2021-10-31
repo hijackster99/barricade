@@ -51,6 +51,6 @@ public class ZombieAI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player") player.GetComponent<PlayerController>().damaage();
+        if (collision.tag == "Player") player.GetComponent<PlayerController>().damage();
     }
 }

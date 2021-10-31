@@ -40,7 +40,7 @@ public class GhostAI : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            player.GetComponent<PlayerController>().damaage();
+            player.GetComponent<PlayerController>().damage();
         }
         else if (collision.gameObject.tag == "Walls")
         {
